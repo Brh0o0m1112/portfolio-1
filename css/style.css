@@ -1,0 +1,291 @@
+:root {
+  /* لوحة الألوان */
+  --bg-main: #0F172A;        /* خلفية الصفحة الداكنة */
+  --bg-card: #1E293B;        /* خلفية البطاقات والشريط العلوي */
+  --text-main: #F8FAFC;      /* لون النصوص الرئيسية */
+  --text-muted: #94A3B8;     /* لون النصوص الثانوية */
+  --accent: #6366F1;         /* اللون البنفسجي المخصص للأزرار */
+  --accent-hover: #4F46E5;   /* لون الأزرار عند التحويم */
+  --border-color: #334155;   /* لون الحدود الخفيفة */
+
+  /* الخطوط والمسافات */
+  --font-family: 'Tajawal', sans-serif;
+  --container-width: 1100px;
+  --radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  line-height: 1.6;
+}
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--text-main);
+    text-decoration: none;
+}
+.logo span {
+    color: var(--accent);
+}
+.navbar {
+    background-color: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+}
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 100px;
+
+}
+.nav-links{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: var(--transition);
+}
+.nav-links a:hover {
+    color: var(--text-main);
+}
+.hero-section {
+    padding: 100px 0 80px;
+    text-align: center;
+}
+.badge {
+    display: inline-block;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 20px;
+    padding: 6px 16px;
+    background-color: rgba(99, 102, 241, 0.1);
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-size: 0.9rem;;
+}
+.hero-title {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+.highlight {
+    color: var(--accent);
+}
+.hero-description {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.hero-buttons a {
+    text-decoration: none;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 10px 22px;
+    border-radius: 6px;
+}
+.primary-btn {
+    background: var(--accent);
+    transition: var(--transition);
+}
+.primary-btn:hover {
+    transform: translateY(-2px);
+    background-color: var(--accent-hover);
+}
+.second-btn {
+    background: transparent;
+    transition: var(--transition);
+}
+.second-btn:hover {
+    background-color: var(--bg-card);
+}
+.about-section {
+    background-color: rgba(30, 41, 59, 0.3);
+    padding: 80px 0;
+}
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.section-title::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent);
+    margin: 8px auto 20px;
+    display: block;
+    border-radius: 2px;
+}
+.about-text {
+    max-width: 750px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    color: var(--text-muted);
+}
+.skills-section {
+    padding: 80px 0;
+}
+.skills-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.skills-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: var(--transition);
+}
+.skills-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+}
+.skills-card h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+.skills-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.projects-section {
+    padding: 80px 0;
+    background-color: rgba(30, 41, 59, 0.3);
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.project-card {
+    background-color: var(--bg-card);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+}
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.project-info {
+    padding: 20px;
+}
+.project-info h3 {
+    margin-bottom: 10px;
+}
+.project-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+.project-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+.project-tags span {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: rgba(148, 163, 184, 0.1);
+    color: var(--text-muted);
+}
+.project-link {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.Contact-section {
+    padding: 80px 0;
+}
+.contact-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    margin-top: -15px;
+
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 500px;
+    gap: 15px;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-family: var(--font-family);
+    outline: none;
+}
+.form-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--accent);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-family: var(--font-family);
+    outline: none;
+}
+
+.footer {
+    padding: 30px 0;
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    color: var(--text-muted);
+}
+.social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.social-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+}
+.social-links a:hover {
+    color: var(--accent);
+}
