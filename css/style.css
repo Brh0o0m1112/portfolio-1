@@ -73,6 +73,7 @@ body {
 .nav-links a:hover {
     color: var(--text-main);
 }
+
 .hero-section {
     padding: 100px 0 80px;
     text-align: center;
@@ -297,6 +298,25 @@ body {
 @media (max-width: 768px) {
     .menu-btn {
         display: block;
+        background: none;
+        color: var(--text-main);
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+    }
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: calc(100% - 40px);
+        padding: 25px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        gap: 20px;
+        z-index: 1000;
     }
 
     .nav-links {
@@ -304,7 +324,7 @@ body {
     }
 
     .navbar-container {
-        padding: 0 50px;
+        padding: 0 25px;
     }
 
     .hero-title {
