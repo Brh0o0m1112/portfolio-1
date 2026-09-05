@@ -15,6 +15,10 @@
   --transition: all 0.3s ease;
 }
 
+.menu-btn {
+    display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -288,4 +292,50 @@ body {
 }
 .social-links a:hover {
     color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .navbar-container {
+        padding: 0 50px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        padding: 0 15px;
+    }
+
+    .hero-description {
+        padding: 0 20px;
+    }
+
+    .skills-grid {
+        flex-direction: column;
+        justify-self: center;
+        max-width: 400px;
+    }
+
+    .Contact-section {
+        padding: 50px 25px;
+    }
+
+    .footer {
+        padding: 20px 0;
+    }
+    .footer-container,
+    .social-links {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .social-links {
+        flex-direction: row;
+        margin-bottom: 10px;
+    }
 }
