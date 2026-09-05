@@ -60,23 +60,21 @@ body {
     padding: 0 100px;
 
 }
-.nav-links{
+.nav-links {
     display: flex;
     gap: 20px;
-    align-items: center;
+    list-style: none;
 }
-
 .nav-links.active a {
     color: var(--text-main);
 }
-
 .nav-links a {
     text-decoration: none;
-    color: var(--text-muted);
+    color: var(--text-main);
     transition: var(--transition);
 }
 .nav-links a:hover {
-    color: var(--text-main);
+    color: var(--text-muted);
 }
 
 .hero-section {
@@ -309,6 +307,10 @@ body {
         font-size: 28px;
         cursor: pointer;
     }
+
+    .nav-links {
+        display: none;
+    }
     .nav-links.active {
         display: flex;
         flex-direction: column;
@@ -322,10 +324,6 @@ body {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         gap: 20px;
         z-index: 1000;
-    }
-
-    .nav-links {
-        display: none;
     }
 
     .navbar-container {
