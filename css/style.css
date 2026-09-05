@@ -65,6 +65,11 @@ body {
     gap: 20px;
     align-items: center;
 }
+
+.nav-links.active a {
+    color: var(--text-main);
+}
+
 .nav-links a {
     text-decoration: none;
     color: var(--text-muted);
@@ -312,7 +317,7 @@ body {
         right: 20px;
         width: calc(100% - 40px);
         padding: 25px;
-        background: white;
+        background: var(--bg-card);
         border-radius: 8px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         gap: 20px;
